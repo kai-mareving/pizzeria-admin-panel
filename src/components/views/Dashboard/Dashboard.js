@@ -8,7 +8,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Dashboard = () => (
   <Section variant='has-hero'>
-    <Hero titleText='Dashboard View' imageSrc='http://uploads.kodilla.com/bootcamp/fer/13.router/image-1.jpg' />
+    <Hero titleText='Dashboard View' imageSrc='http://i.imgur.com/DlItpG5.jpg' />
     <Grid>
       <Row middle="md">
         <Col md={6}>

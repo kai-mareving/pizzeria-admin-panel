@@ -1,0 +1,20 @@
+$font-header: 'Oswald', sans-serif;
+$font-text: 'Noto Serif', serif;
+
+$color-light: #fff;
+$color-dark: #222f3e;
+$color-background: #c8d6e5;
+$color-primary: #ff9f43;
+$color-secondary: #218c74;
+$color-success: #07b66d;
+
+$base-size: 12px;
+$radius: 5px;
+$transition: all 0.5s;
+
+@mixin p-el($element) {
+  &:#{$element}, &::#{$element} {
+    position: absolute;
+    @content;
+  }
+}

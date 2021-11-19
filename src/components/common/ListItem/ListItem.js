@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from '../Icon/Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './ListItem.module.scss';
 
 function ListItem(props) {
@@ -10,7 +10,7 @@ function ListItem(props) {
 
   return (
     <div className={styles.component}>
-      <Icon name={props.icon} /><span><a className={styles.viewLink} href={link}>{props.title}</a></span>
+      <FontAwesomeIcon icon={props.icon} /><a className={styles.viewLink} href={process.env.PUBLIC_URL + link}>{props.title}</a>
     </div>
   );
 }

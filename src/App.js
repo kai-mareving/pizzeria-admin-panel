@@ -21,20 +21,21 @@ function App() {
         atActive={{ opacity: 1 }}
         className={styles.switchWrapper}
       >
-          <Route exact path='/' component={Dashboard} />
-          {/* <Route exact path={process.env.PUBLIC_URL + '/'} component={Dashboard} /> */}
-          <Route exact path='/kitchen' component={Kitchen} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/tables' component={Tables} />
-          {/* <Route exact path={process.env.PUBLIC_URL + '/tables/booking/new'} component={Tables} /> */}
-          {/* <Route exact path={process.env.PUBLIC_URL + '/tables/booking/:id'} component={Tables} /> */}
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Dashboard} />
 
-          {/* <Route exact path={process.env.PUBLIC_URL + '/tables/events/new'} component={Tables} /> */}
-          {/* <Route exact path={process.env.PUBLIC_URL + '/tables/events/:id'} component={Tables} /> */}
+          <Route exact path={process.env.PUBLIC_URL + '/login'} component={Login} />
 
-          <Route exact path='/waiter' component={Waiter} />
-          {/* <Route exact path={process.env.PUBLIC_URL + '/waiter/order/new'} component={Waiter} /> */}
-          {/* <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={Waiter} /> */}
+          <Route exact path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables/booking/new'} component={Tables} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables/booking/:id'} component={Tables} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables/events/new'} component={Tables} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables/events/:id'} component={Tables} />
+
+          <Route exact path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
+          <Route exact path={process.env.PUBLIC_URL + '/waiter/order/new'} component={Waiter} />
+          <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={Waiter} />
+
+          <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
         </ AnimatedSwitch>
       </MainLayout>
     </BrowserRouter>

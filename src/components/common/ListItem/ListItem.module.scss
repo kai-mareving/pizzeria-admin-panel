@@ -3,7 +3,22 @@
 .component {
   margin-bottom: $base-size;
 
-  .viewLink a {
-  text-decoration: none!important;
+  a {
+    color: $color-light;
+    margin-right: ($base-size * 3);
+    padding-bottom: ($base-size / 2);
+    transition: color 0.4s linear;
+    text-decoration: none;
+    font-family: $font-link;
+    font-size: $base-size * 1.2;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:hover {
+      color: $color-primary;
+    }
+    &:global(.active) {
+      border-bottom: 4px solid $color-primary;
+    }
   }
 }

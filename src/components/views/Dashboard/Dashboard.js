@@ -4,6 +4,9 @@ import Section from '../../layout/Section/Section';
 import Hero from '../../layout/Hero/Hero';
 import List from '../../common/List/List';
 import ListItem from '../../common/ListItem/ListItem';
+import {faUtensils} from '@fortawesome/free-solid-svg-icons'
+import {faPray} from '@fortawesome/free-solid-svg-icons'
+import {faBreadSlice} from '@fortawesome/free-solid-svg-icons'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Dashboard = () => (
@@ -17,9 +20,9 @@ const Dashboard = () => (
         </Col>
         <Col xs={12} md={5} mdOffset={1} xl={3} xlOffset={2}>
           <List variant='solid'>
-            <ListItem title='Tables View' icon='utensils' />
-            <ListItem title='Waiter View' icon='pray' />
-            <ListItem title='Kitchen View' icon='bread-slice' />
+            <ListItem title=' Tables View' icon={faUtensils} />
+            <ListItem title=' Waiter View' icon={faPray} />
+            <ListItem title=' Kitchen View' icon={faBreadSlice} />
           </List>
         </Col>
       </Row>

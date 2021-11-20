@@ -11,12 +11,12 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Dashboard = () => (
   <Section variant='has-hero'>
-    <Hero titleText='Dashboard View' imageSrc='http://i.imgur.com/DlItpG5.jpg' />
+    <Hero titleText='Dashboard View' imageSrc='https://picsum.photos/id/163/2000/1333' />
     <Grid>
       <Row middle="md">
         <Col md={6}>
           <h1 className={styles.title}>Welcome to Dashboard</h1>
-          <p className={styles.intro}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies eros eu nisl vestibulum iaculis. Maecenas dapibus lorem quis ex ornare dignissim. Donec lobortis commodo augue, vel accumsan nunc facilisis vitae. Suspendisse bibendum congue sapien ut elementum. Nunc pellentesque, tortor et dignissim fermentum, purus mi sagittis neque, ut iaculis arcu lorem nec tellus. Integer in viverra lectus, vitae sollicitudin nulla. Sed mollis at odio eu pretium. Donec porta ligula sed diam pulvinar viverra.</p>
+          <p className={styles.intro}>On the right you will find links to other available modules.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies eros eu nisl vestibulum iaculis. Maecenas dapibus lorem quis ex ornare dignissim. Donec lobortis commodo augue, vel accumsan nunc facilisis vitae. Suspendisse bibendum congue sapien ut elementum. Nunc pellentesque, tortor et dignissim fermentum, purus mi sagittis neque, ut iaculis arcu lorem nec tellus.</p>
         </Col>
         <Col xs={12} md={5} mdOffset={1} xl={3} xlOffset={2}>
           <List variant='solid'>

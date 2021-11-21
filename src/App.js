@@ -1,14 +1,13 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 import styles from './styles/SwitchWrapper.scss';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import Dashboard from './components/views/Dashboard/Dashboard';
-import Kitchen from '../src/components/views/Kitchen/Kitchen';
 import Login from '../src/components/views/Login/Login';
 import Tables from '../src/components/views/Tables/Tables';
 import Waiter from '../src/components/views/Waiter/Waiter';
+import Kitchen from '../src/components/views/Kitchen/Kitchen';
 
 
 function App() {

@@ -4,14 +4,14 @@ import Section from '../../layout/Section/Section';
 import Hero from '../../layout/Hero/Hero';
 import List from '../../common/List/List';
 import ListItem from '../../common/ListItem/ListItem';
-import {faUtensils} from '@fortawesome/free-solid-svg-icons'
-import {faPray} from '@fortawesome/free-solid-svg-icons'
-import {faBreadSlice} from '@fortawesome/free-solid-svg-icons'
+import { faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faPray } from '@fortawesome/free-solid-svg-icons';
+import { faBreadSlice } from '@fortawesome/free-solid-svg-icons';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Dashboard = () => (
   <Section variant='has-hero'>
-    <Hero titleText='Dashboard View' imageSrc='https://picsum.photos/id/163/2000/1333' />
+    <Hero titleText='Dashboard' imageSrc='https://i.imgur.com/Nnusvb4.jpg' />
     <Grid>
       <Row middle="md">
         <Col md={6}>

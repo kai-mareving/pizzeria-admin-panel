@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Login.module.scss';
+import Hero from '../../layout/Hero/Hero';
+import PageTitle from '../../common/PageTitle/PageTitle';
 
 const Login = (props) => {
   return (
     <div className={styles.component}>
-      <h2>{props.title}</h2>
+      <Hero titleText='Login' imageSrc='https://i.imgur.com/2bCsis0.jpg' />
+      <PageTitle text={props.title} />
     </div>
   );
 };

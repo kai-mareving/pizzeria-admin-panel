@@ -1,9 +1,9 @@
 import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import styles from './PageNav.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
+// import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const PageNav = () => {
@@ -15,7 +15,7 @@ const PageNav = () => {
           <Col md={3} lg={2}>
             <Link to='/'>
               <div className={styles.logo}>
-                <FontAwesomeIcon icon={faPizzaSlice} />
+                {/* <FontAwesomeIcon icon={faPizzaSlice} /> */}
                 <span className={styles.name}>Admin Panel</span>
               </div>
             </Link>
@@ -31,7 +31,7 @@ const PageNav = () => {
           </Col>
           <Col md={3} lg={2}>
             <div className={styles.contact}>
-            <FontAwesomeIcon icon={faPhone} /><span>+48 889 900 900</span>
+              {/* <FontAwesomeIcon icon={faPhone} /> */}<span>+48 889 900 900</span>
             </div>
           </Col>
         </Row>

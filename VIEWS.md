@@ -3,7 +3,8 @@
 - `/`
   - todays orders statistics (remote and local)
   - list of events and reservations planned for today
-# Login
+
+# Login [DONE]
 
 - `/login`
   - login and password input fields

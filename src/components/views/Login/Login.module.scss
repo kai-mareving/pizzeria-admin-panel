@@ -2,4 +2,28 @@
 
 .component {
   padding: $base-size;
+  width: auto;
+}
+
+.login {
+  margin: $base-size;
+  border: solid 1px $color-primary;
+  width: $base-size * 20;
+}
+
+.password {
+  margin: $base-size;
+  border: solid 1px $color-primary;
+  width: $base-size * 20;
+}
+
+.button {
+  margin: $base-size;
+  border-radius: 0;
+  border: solid 1px $color-primary;
+  &:hover {
+    background-color: $color-dark;
+    border: dashed 1px $color-primary;
+    color: $color-light;
+  }
 }

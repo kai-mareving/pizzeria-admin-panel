@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function ListItem(props) {
   let titleArray = props.title.split(' ');
-  let link = titleArray[1].toLowerCase(); //[1] because [0] is a space
+  let link = titleArray[0].toLowerCase(); //remember to switch to [1] if [0] becomes a space again
 
   return (
     <div className={styles.component}>

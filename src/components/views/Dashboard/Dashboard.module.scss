@@ -7,3 +7,15 @@
 .intro {
   margin: ($base-size * 3) 0;
 }
+
+.button {
+  border: solid 1px $color-dark;
+  &:hover {
+    background-color: $color-navy;
+    border: dashed 1px $color-dark;
+    color: $color-light;
+  }
+  &:not(:first-child){
+    margin-left: 10px;
+  }
+}

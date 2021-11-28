@@ -3,27 +3,30 @@
 .component {
   padding: $base-size;
   width: auto;
+  align-items: center;
+}
+
+.container {
+  width: $base-size * 29;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
 }
 
 .login {
-  margin: $base-size;
-  border: solid 1px $color-primary;
   width: $base-size * 20;
 }
 
-.password {
-  margin: $base-size;
-  border: solid 1px $color-primary;
+.input {
   width: $base-size * 20;
-}
-
-.button {
-  margin: $base-size;
-  border-radius: 0;
-  border: solid 1px $color-primary;
+  margin: 20px auto;
+  border: solid 1px $color-secondary;
+  background-color: $color-navy;
+  color: $color-light;
   &:hover {
-    background-color: $color-dark;
-    border: dashed 1px $color-primary;
-    color: $color-light;
+    background-color: $color-light;
+    border-color: $color-navy;
+    color: $color-navy;
   }
 }

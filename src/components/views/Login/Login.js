@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import styles from './Login.module.scss';
 import Container from '@material-ui/core/Container';
 import Hero from '../../layout/Hero/Hero';
-import Toolbar from '@material-ui/core/Toolbar';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
@@ -39,12 +38,8 @@ const Login = (props) => {
 
   return (
     <div className={styles.component}>
-      <Container maxWidth='lg'>
-        <Hero
-          titleText={props.title}
-          imageSrc='https://i.imgur.com/liX8i3b.jpg'
-        />
-        <Toolbar />
+      <Hero titleText={props.title} imageSrc='https://i.imgur.com/liX8i3b.jpg' />
+      <Container maxWidth='lg' className={styles.container}>
         <FormControl className={styles.login}>
           <InputLabel htmlFor='input-with-icon-login'>Login</InputLabel>
           <Input
@@ -59,8 +54,8 @@ const Login = (props) => {
           />
         </FormControl>
       </Container>
-      <Container maxWidth='lg'>
-        <FormControl className={styles.password}>
+      <Container maxWidth='lg' className={styles.container}>
+        <FormControl>
           <InputLabel htmlFor='standard-adornment-password'>Password</InputLabel>
           <Input
             id='standard-adornment-password'
@@ -81,8 +76,8 @@ const Login = (props) => {
           />
         </FormControl>
       </Container>
-      <Container maxWidth='lg'>
-        <Button className={styles.button} component={NavLink} exact to={`${process.env.PUBLIC_URL}/`}>Login</Button>
+      <Container className={styles.container}>
+        <Button className={styles.input} component={NavLink} exact to={`${process.env.PUBLIC_URL}/`}>Login</Button>
       </Container>
     </div>
   );

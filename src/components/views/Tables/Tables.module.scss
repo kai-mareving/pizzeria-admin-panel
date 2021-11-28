@@ -4,19 +4,14 @@
   padding: $base-size;
 }
 
-.linkList {
-  background-color: $color-light;
-  width: 250px;
-
-  li {
-    list-style: none;
-    padding-bottom: $base-size * 1;
-    width: 100%;
-
-    a {
-      text-decoration: none;
-      background: $color-dark;
-      color: $color-light;
-    }
+.button {
+  border: solid 1px $color-dark;
+  &:hover {
+    background-color: $color-navy;
+    border: dashed 1px $color-dark;
+    color: $color-light;
+  }
+  &:not(:first-child){
+    margin-left: 10px;
   }
 }

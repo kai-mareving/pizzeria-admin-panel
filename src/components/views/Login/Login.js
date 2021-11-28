@@ -7,7 +7,7 @@ import PageTitle from '../../common/PageTitle/PageTitle';
 const Login = (props) => {
   return (
     <div className={styles.component}>
-      <Hero titleText='Login' imageSrc='https://i.imgur.com/2bCsis0.jpg' />
+      <Hero titleText='Login' imageSrc='https://i.imgur.com/liX8i3b.jpg' />
       <PageTitle text={props.title} />
     </div>
   );

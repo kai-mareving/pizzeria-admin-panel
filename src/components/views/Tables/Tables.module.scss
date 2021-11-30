@@ -4,8 +4,32 @@
   padding: $base-size;
 }
 
+.tablehead {
+  background-color: $color-navy;
+}
+
+.container {
+  margin-bottom: $base-size * 2;
+  padding-bottom: $base-size * 4.5;
+  display: flex;
+  flex-wrap: wrap;
+  // height: 600px;
+  justify-content: center;
+}
+
+.textField {
+  width: 200;
+}
+
+.table {
+  min-width: 650px;
+  margin-top: $base-size * 3;
+}
+
 .button {
   border: solid 1px $color-dark;
+  border-radius: 0;
+
   &:hover {
     background-color: $color-navy;
     border: dashed 1px $color-dark;

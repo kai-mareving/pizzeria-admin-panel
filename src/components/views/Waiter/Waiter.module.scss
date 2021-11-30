@@ -4,8 +4,14 @@
   padding: $base-size;
 }
 
+.tablehead {
+  background-color: $color-navy;
+}
+
 .button {
   border: solid 1px $color-dark;
+  border-radius: 0;
+
   &:hover {
     background-color: $color-navy;
     border: dashed 1px $color-dark;

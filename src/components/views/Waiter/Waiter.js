@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './Waiter.module.scss';
 import Hero from '../../layout/Hero/Hero';
+import Toolbar from '@material-ui/core/Toolbar';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
@@ -55,8 +56,9 @@ const Waiter = (props) => {
       <Button className={styles.button} component={NavLink} to={`${process.env.PUBLIC_URL}/waiter/order/:id`}
         activeClassName='active'> Edit Order
       </Button>
+      <Toolbar />
       <Table>
-        <TableHead>
+        <TableHead className={styles.tablehead}>
           <TableRow>
             <TableCell>Table</TableCell>
             <TableCell>Status</TableCell>

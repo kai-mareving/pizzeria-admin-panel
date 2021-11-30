@@ -46,7 +46,7 @@
 
 # Kitchen view
 
-- `/kitchen`
+- `/kitchen` [DONE]
   - list of orders sorted according to time of placement
   - list must contain:
     - table number || remote order number

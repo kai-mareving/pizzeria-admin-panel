@@ -6,6 +6,7 @@ import MainLayout from './components/layout/MainLayout/MainLayout';
 import Dashboard from './components/views/Dashboard/Dashboard';
 import Login from '../src/components/views/Login/Login';
 import Tables from '../src/components/views/Tables/Tables';
+import TablesBookingNew from '../src/components/views/TablesBookingNew/TablesBookingNew';
 import Waiter from '../src/components/views/Waiter/Waiter';
 import Kitchen from '../src/components/views/Kitchen/Kitchen';
 //? Material UI styles are added after our predefined styles so they have a higher importance
@@ -33,7 +34,7 @@ function App() {
               <Route exact path={process.env.PUBLIC_URL + '/login'} component={Login} />
 
               <Route exact path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
-              <Route exact path={process.env.PUBLIC_URL + '/tables/booking/new'} component={Tables} />
+              <Route exact path={process.env.PUBLIC_URL + '/tables/booking/new'} component={TablesBookingNew} />
               <Route exact path={process.env.PUBLIC_URL + '/tables/booking/:id'} component={Tables} />
               <Route exact path={process.env.PUBLIC_URL + '/tables/events/new'} component={Tables} />
               <Route exact path={process.env.PUBLIC_URL + '/tables/events/:id'} component={Tables} />

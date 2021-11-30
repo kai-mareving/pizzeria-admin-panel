@@ -2,4 +2,11 @@
 
 .component {
   padding: $base-size;
+  // margin-top: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.tablehead {
+  background-color: $color-navy;
 }

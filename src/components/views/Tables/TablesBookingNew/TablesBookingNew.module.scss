@@ -1,7 +1,8 @@
-@import "../../../styles/settings.scss";
+@import "../../../../styles/settings.scss";
 
 .component {
   padding: $base-size;
+  border: solid 1px $color-primary;
 }
 
 .table {

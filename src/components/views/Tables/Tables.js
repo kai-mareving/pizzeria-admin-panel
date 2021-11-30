@@ -44,12 +44,8 @@ const Tables = (props) => {
       <Paper className={styles.container}>
         <Button className={styles.button} component={NavLink} to={`${process.env.PUBLIC_URL}/tables/booking/new`} activeClassName='active'>New Table
         </Button>
-        {/* <Button className={styles.button} component={NavLink} to={`${process.env.PUBLIC_URL}/tables/booking/:id`} activeClassName='active'> Edit Table
-        </Button> */}
         <Button className={styles.button} component={NavLink} to={`${process.env.PUBLIC_URL}/tables/events/new`} activeClassName='active'> New Event
         </Button>
-        {/* <Button className={styles.button} component={NavLink} to={`${process.env.PUBLIC_URL}/tables/events/:id`} activeClassName='active'> Edit Event
-        </Button> */}
       </ Paper>
       <Paper className={styles.container}>
         <form noValidate>

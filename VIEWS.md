@@ -13,29 +13,29 @@
 # Table availability view
 
 - `/tables`
-  - date and hour choice field
-  - table for events and reservations
+  - date and hour choice field [done]
+  - table for events and reservations [done]
     - each column = 1 table
     - each row = 30 minutes
     - resembles week view in Google Calendar where in columns instead of days of the week are numbers of tables
-- `/tables/booking/:id`
+- `/tables/booking/:id` [todo]
   - contains all information regarding the booking
   - allows to edit and save changes
-- `/tables/booking/new`
+- `/tables/booking/new` [done]
   - by analogy with the above, without the information part
-- `/tables/events/:id`
+- `/tables/events/:id` [todo]
   - by analogy with the above, but for events
-- `/tables/events/new`
+- `/tables/events/new` [done]
   - by analogy with the above, for events and without the information part
 
 # Waiter view
 
-- `/waiter`
-  - table
-    - tables in rows
-    - in columns various information (status, time from last activity)
-    - in last column actions available for chosen table
-- `/waiter/order/new`
+- `/waiter` [done]
+  - table [done]
+    - tables in rows [done]
+    - in columns various information (status, time from last activity) [done]
+    - in last column actions available for chosen table [done]
+- `/waiter/order/new` [TODO]
   - number of table (editable)
   - products menu
   - options for chosen table
@@ -44,9 +44,9 @@
 - `/waiter/order/:id`
   - as above
 
-# Kitchen view
+# Kitchen view [DONE]
 
-- `/kitchen` [DONE]
+- `/kitchen`
   - list of orders sorted according to time of placement
   - list must contain:
     - table number || remote order number

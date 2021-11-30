@@ -8,7 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-import DatePickers from '../../features/DatePicker';
+import DatePickers from '../../../features/DatePicker';
 
 function createData(info, details) {
   return { info, details };
@@ -43,8 +43,8 @@ const TablesBookingNew = () => (
         </TableBody>
       </Table>
       <Container className={styles.button}>
-        <Button color="primary"
-          variant="outlined">Add
+        <Button color="secondary"
+          variant="outlined">Book Table
         </Button>
       </ Container>
     </Paper>

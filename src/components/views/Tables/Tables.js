@@ -101,7 +101,7 @@ const Tables = (props) => {
                       size="small"
                       variant="outlined"
                       color="primary"
-                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table2}`}
+                      to={`${process.env.PUBLIC_URL}/tables/events/${row.table2}`}
                     >
                       {row.table2}
                     </Button>
@@ -116,7 +116,7 @@ const Tables = (props) => {
                       size="small"
                       variant="outlined"
                       color="primary"
-                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table3}`}
+                      to={`${process.env.PUBLIC_URL}/tables/events/${row.table3}`}
                     >
                       {row.table3}
                     </Button>

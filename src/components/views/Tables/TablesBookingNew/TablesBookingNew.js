@@ -8,14 +8,16 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-import DatePickers from '../../../features/DatePicker';
+import DatePicker from '../../../features/DatePicker';
 
 function createData(info, details) {
   return { info, details };
 }
 
 const rows = [
-  createData('Date and Time:', <DatePickers />),
+  createData('Date and Time:', <DatePicker />),
+  createData('First and last name:', 'input text z MUI'),
+  createData('Table number:', 'input number z MUI'),
 ];
 
 const TablesBookingNew = () => (

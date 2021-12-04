@@ -1,0 +1,15 @@
+@import '../../../../styles/settings.scss';
+
+.component {
+  padding: $base-size * 2;
+}
+
+.container {
+  margin-bottom: $base-size * 2;
+  padding-bottom: $base-size * 4.5;
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}

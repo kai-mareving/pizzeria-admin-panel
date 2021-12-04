@@ -11,6 +11,8 @@ import TablesBookingEdit from '../src/components/views/Tables/TablesBookingEdit/
 import TablesEventNew from './components/views/Tables/TablesEventNew/TablesEventNew';
 import TablesEventEdit from './components/views/Tables/TablesEventEdit/TablesEventEdit';
 import Waiter from '../src/components/views/Waiter/Waiter';
+import WaiterOrderNew from '../src/components/views/Waiter/WaiterOrderNew/WaiterOrderNew';
+import WaiterOrderEdit from '../src/components/views/Waiter/WaiterOrderEdit/WaiterOrderEdit';
 import Kitchen from '../src/components/views/Kitchen/Kitchen';
 //? Material UI styles are added after our predefined styles so they have a higher importance
 import { StylesProvider } from '@material-ui/core/styles'; //! MUI Styles bypass
@@ -43,8 +45,8 @@ function App() {
               <Route exact path={process.env.PUBLIC_URL + '/tables/events/:id'} component={TablesEventEdit} />
 
               <Route exact path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
-              <Route exact path={process.env.PUBLIC_URL + '/waiter/order/new'} component={Waiter} />
-              <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={Waiter} />
+              <Route exact path={process.env.PUBLIC_URL + '/waiter/order/new'} component={WaiterOrderNew} />
+              <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={WaiterOrderEdit} />
 
               <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
             </ AnimatedSwitch>

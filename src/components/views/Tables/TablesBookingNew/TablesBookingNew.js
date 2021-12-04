@@ -9,6 +9,11 @@ import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import DatePicker from '../../../features/DatePicker';
+import TextField from '../../../features/TextField';
+import TableNoField from '../../../features/TableNoField';
+import PeopleNoField from '../../../features/PeopleNoField';
+import DishTextField from '../../../features/SelectDishField';
+import DrinksTextField from '../../../features/SelectDrinkField';
 
 function createData(info, details) {
   return { info, details };
@@ -16,8 +21,11 @@ function createData(info, details) {
 
 const rows = [
   createData('Date and Time:', <DatePicker />),
-  createData('First and last name:', 'input text z MUI'),
-  createData('Table number:', 'input number z MUI'),
+  createData('First and Last Name:', <TextField />),
+  createData('Table Number:', <TableNoField />),
+  createData('Number of people:',<PeopleNoField />),
+  createData('Choose a dish:', <DishTextField />),
+  createData('Choose a drink:', <DrinksTextField />),
 ];
 
 const TablesBookingNew = () => (

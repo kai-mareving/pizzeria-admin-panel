@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const jsonServer = require('json-server');
+// const cors = require('cors'); //ASK ???
 const server = jsonServer.create();
 const router = jsonServer.router('build/db/app.json');
 const middlewares = jsonServer.defaults({
@@ -36,5 +37,6 @@ server.use(function(req, res, next) {
 
 server.use(middlewares);
 server.use(router);
+// server.use(cors()); //ASK ???
 
 server.listen(port);

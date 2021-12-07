@@ -21,30 +21,6 @@ import Button from '@material-ui/core/Button';
 //   { id: '6', status: 'paid', order: 456 },
 // ];
 
-const renderActions = status => {
-  switch (status) {
-    case 'free':
-      return (
-        <>
-          <Button>thinking</Button>
-          <Button>new order</Button>
-        </>
-      );
-    case 'thinking':
-      return (<Button>new order</Button>);
-    case 'ordered':
-      return (<Button>prepared</Button>);
-    case 'prepared':
-      return (<Button>delivered</Button>);
-    case 'delivered':
-      return (<Button>paid</Button>);
-    case 'paid':
-      return (<Button>free</Button>);
-    default:
-      return null;
-  }
-};
-
 /* *** Component *** */
 class Waiter extends React.Component {
   static propTypes = {
@@ -94,8 +70,8 @@ class Waiter extends React.Component {
     }
   };
 
-  render() {
-    const { loading: { active, error }, tables } = this.props;
+  render(){
+    const { loading: { active, error }, tables, title } = this.props;
 
     if (active || !tables.length) {
       return (
@@ -113,7 +89,7 @@ class Waiter extends React.Component {
     } else {
       return (
         <Paper className={styles.component}>
-          <Hero titleText={this.props.title} imageSrc='https://i.imgur.com/mx6BQiG.jpg' />
+          <Hero titleText={title} imageSrc='https://i.imgur.com/mx6BQiG.jpg' />
           <Button className={styles.button} component={NavLink} to={`${process.env.PUBLIC_URL}/waiter/order/new`}
             activeClassName='active'>New Order
           </Button>

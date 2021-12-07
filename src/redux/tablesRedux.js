@@ -1,4 +1,4 @@
-import { Axios } from 'axios';
+import axios from 'axios';
 import { api } from './../settings';
 
 /* selectors */
@@ -24,8 +24,8 @@ export const fetchFromAPI = () => {
   return (dispatch, getState) => {
     dispatch(fetchStarted());
 
-    Axios
-      .get(`${api.url}/api/${api.tables}`)
+    axios
+      .get(`${api.url}/api/${api.tables}`, {mode:'cors'}) //ASK ???
       .then(res => {
         dispatch(fetchSuccess(res.data));
       })

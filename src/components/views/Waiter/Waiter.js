@@ -12,15 +12,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
 
-// const demoContent = [
-//   { id: '1', status: 'free', order: null },
-//   { id: '2', status: 'thinking', order: null },
-//   { id: '3', status: 'ordered', order: 123 },
-//   { id: '4', status: 'prepared', order: 234 },
-//   { id: '5', status: 'delivered', order: 345 },
-//   { id: '6', status: 'paid', order: 456 },
-// ];
-
 /* *** Component *** */
 class Waiter extends React.Component {
   static propTypes = {
@@ -31,10 +22,14 @@ class Waiter extends React.Component {
     }),
     title: PropTypes.string,
     match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string,
+      params: PropTypes.shape({
+        id: PropTypes.string,
+      }),
     }),
-  }),
+    tables: PropTypes.shape({
+      length: PropTypes.number,
+      map: PropTypes.func,
+    }),
   }
 
   static defaultProps = {
@@ -68,7 +63,7 @@ class Waiter extends React.Component {
       default:
         return null;
     }
-  };
+  }
 
   render(){
     const { loading: { active, error }, tables, title } = this.props;

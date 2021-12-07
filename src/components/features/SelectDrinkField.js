@@ -52,7 +52,7 @@ export default function DrinksTextField() {
           ))}
         </TextField>
       </div>
-      <IconButton color='primary' aria-label='add to shopping cart' onClick={() => { alert('clicked') }}>
+      <IconButton color='primary' aria-label='add to shopping cart' onClick={() => { alert('clicked'); }}>
         <AddShoppingCartIcon />
       </IconButton>
     </form>

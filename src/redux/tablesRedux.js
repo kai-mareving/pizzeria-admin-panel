@@ -1,4 +1,4 @@
-import axios from 'axios';
+import Axios from 'axios';
 import { api } from './../settings';
 
 /* selectors */
@@ -24,9 +24,9 @@ export const fetchFromAPI = () => {
   return (dispatch, getState) => {
     dispatch(fetchStarted());
 
-    axios
-    .get(`${api.url}/api/${api.tables}`)
-    .then(res => {
+    Axios
+      .get(`${api.url}/api/${api.tables}`)
+      .then(res => {
         dispatch(fetchSuccess(res.data));
       })
       .catch(err => {

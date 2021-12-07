@@ -4,7 +4,7 @@ import store from './redux/store';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 import styles from './styles/SwitchWrapper.scss';
-/* Material UI styles are added after our predefined styles so they have a higher importance */
+//* Material UI styles are added after our predefined styles so they have a higher importance
 import { StylesProvider } from '@material-ui/core/styles'; /* MUI Styles bypass */
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';

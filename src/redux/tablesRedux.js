@@ -25,8 +25,8 @@ export const fetchFromAPI = () => {
     dispatch(fetchStarted());
 
     axios
-      .get(`${api.url}/api/${api.tables}`, {mode:'cors'}) //ASK ???
-      .then(res => {
+    .get(`${api.url}/api/${api.tables}`)
+    .then(res => {
         dispatch(fetchSuccess(res.data));
       })
       .catch(err => {

@@ -3,12 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 const jsonServer = require('json-server');
-// const cors = require('cors'); //ASK ???
 const server = jsonServer.create();
 const router = jsonServer.router('build/db/app.json');
 const middlewares = jsonServer.defaults({
   static: 'build',
-  noCors: true
+  noCors: true,
 });
 const port = process.env.PORT || 3131;
 
@@ -26,7 +25,6 @@ server.get(/^\/panel.*/, (req,res) =>{
 
 server.use(function(req, res, next) {
   const api = /^\/api(.*)$/.exec(req.url);
-
   if (api && api.length > 1) {
     req.url = api[1] || '/';
   } else {
@@ -37,6 +35,5 @@ server.use(function(req, res, next) {
 
 server.use(middlewares);
 server.use(router);
-// server.use(cors()); //ASK ???
 
 server.listen(port);

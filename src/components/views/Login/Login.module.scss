@@ -4,13 +4,24 @@
   padding: $base-size;
   width: auto;
   align-items: center;
+  position: relative;
+}
+
+.panelxs {
+  padding-top: $base-size * 2;
+  width: 400px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translate(-50%,-50%);
 }
 
 .container {
   width: $base-size * 29;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
+  // justify-content: center;
   text-align: center;
 }
 

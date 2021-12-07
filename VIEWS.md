@@ -2,7 +2,10 @@
 
 - `/`
   - todays orders statistics (remote and local)
+    - table with 2 rows (remote + local)
+    - 2 columns in row (number + number)
   - list of events and reservations planned for today
+    - list from static table (hour, table, type: event/booking
 
 # Login [DONE]
 
@@ -10,7 +13,7 @@
   - login and password input fields
   - login button (links to dashboard)
 
-# Table availability view
+# Table availability view [DONE]
 
 - `/tables`
   - date and hour choice field [done]
@@ -18,30 +21,30 @@
     - each column = 1 table
     - each row = 30 minutes
     - resembles week view in Google Calendar where in columns instead of days of the week are numbers of tables
-- `/tables/booking/:id` [todo]
+- `/tables/booking/:id` [done]
   - contains all information regarding the booking
   - allows to edit and save changes
 - `/tables/booking/new` [done]
   - by analogy with the above, without the information part
-- `/tables/events/:id` [todo]
+- `/tables/events/:id` [done]
   - by analogy with the above, but for events
 - `/tables/events/new` [done]
   - by analogy with the above, for events and without the information part
 
-# Waiter view
+# Waiter view [DONE]
 
 - `/waiter` [done]
   - table [done]
     - tables in rows [done]
     - in columns various information (status, time from last activity) [done]
     - in last column actions available for chosen table [done]
-- `/waiter/order/new` [TODO]
+- `/waiter/order/new` [done]
   - number of table (editable)
   - products menu
   - options for chosen table
   - order (products and price)
   - order total amount
-- `/waiter/order/:id`
+- `/waiter/order/:id` [done]
   - as above
 
 # Kitchen view [DONE]

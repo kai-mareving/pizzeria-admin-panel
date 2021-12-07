@@ -27,8 +27,8 @@ const Dashboard = (props) => (
   <div className={styles.component}>
     <Hero titleText={props.title} imageSrc='https://i.imgur.com/Nnusvb4.jpg' />
     <Container maxWidth='lg' className={styles.container}>
-      <Paper className={styles.intro}>
-        <Table size="large">
+      <Paper elevation={24}>
+        <Table size='medium'>
           <TableHead className={styles.tablehead}>
             <TableRow>
               <TableCell>Order Type</TableCell>

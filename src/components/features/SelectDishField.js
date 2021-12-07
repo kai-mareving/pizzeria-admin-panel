@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import IconButton from '@material-ui/core/IconButton';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const dishes = [
   {
@@ -35,13 +37,13 @@ export default function DishTextField() {
   const classes = useStyles();
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <form className={classes.root} noValidate autoComplete='off'>
       <div>
         <TextField
-          id="standard-select-dishes"
+          id='standard-select-dishes'
           select
-          label="Select"
-          helperText="Please select a dish"
+          label='Select'
+          helperText='Please select a dish'
         >
           {dishes.map((option) => (
             <MenuItem key={option.id} value={option.id}>
@@ -50,6 +52,9 @@ export default function DishTextField() {
           ))}
         </TextField>
       </div>
+      <IconButton color='primary' aria-label='add to shopping cart' onClick={() => { alert('clicked') }}>
+        <AddShoppingCartIcon />
+      </IconButton>
     </form>
   );
 }

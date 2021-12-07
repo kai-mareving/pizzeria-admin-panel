@@ -113,7 +113,7 @@ const Kitchen = (props) => {
   return (
     <div className={styles.component}>
       <Hero titleText={props.title} imageSrc='https://i.imgur.com/i5M5SAT.jpg' />
-      <Paper>
+      <Paper elevation={24}>
         <Table size="small">
           <TableHead className={styles.tablehead}>
             <TableRow>

@@ -1,4 +1,4 @@
-import Axios from 'axios';
+import axios from 'axios';
 import { api } from './../settings';
 
 /* selectors */
@@ -13,21 +13,37 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const FETCH_START = createActionName('FETCH_START');
 const FETCH_SUCCESS = createActionName('FETCH_SUCCESS');
 const FETCH_ERROR = createActionName('FETCH_ERROR');
+const UPDATE_STATUS = createActionName('UPDATE_STATUS');
 
 /* action creators */
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
+export const updateStatus = payload => ({ payload, type: UPDATE_STATUS });
 
 /* thunk creators */
 export const fetchFromAPI = () => {
   return (dispatch, getState) => {
     dispatch(fetchStarted());
 
-    Axios
+    axios
       .get(`${api.url}/api/${api.tables}`)
       .then(res => {
         dispatch(fetchSuccess(res.data));
+      })
+      .catch(err => {
+        dispatch(fetchError(err.message || true));
+      });
+  };
+};
+
+export const updateTableStatus = (tableId, status) => {
+  console.log(tableId, status);
+  return (dispatch, getState) => {
+    axios
+      .patch(`${api.url}/api/${api.tables}/${tableId}`, { status })
+      .then(res => {
+        dispatch(updateStatus({ status, tableId }));
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));
@@ -64,6 +80,13 @@ export default function reducer(statePart = [], action = {}) {
           active: false,
           error: action.payload,
         },
+      };
+    }
+    case UPDATE_STATUS: {
+      return {
+        ...statePart,
+        data: statePart.data.map(table => table.id === action.payload.tableId ?
+          { ...table, status: action.payload.status } : table),
       };
     }
     default:

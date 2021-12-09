@@ -25,11 +25,6 @@ class Waiter extends React.Component {
     length: PropTypes.number,
     map: PropTypes.func,
     updateStatus: PropTypes.func,
-    /* match: PropTypes.shape({
-      params: PropTypes.shape({
-        id: PropTypes.string,
-      }),
-    }), */
   }
 
   static defaultProps = {
@@ -41,28 +36,22 @@ class Waiter extends React.Component {
     fetchTables();
   }
 
-  renderActions(id, status) {
+  renderActions(tableId, tableStatus) {
     const { updateStatus } = this.props;
 
-    switch (status) {
+    switch (tableStatus) {
       case 'free':
-        return ( <Button onClick={() => updateStatus(id, status)}
-          href={process.env.PUBLIC_URL + '/waiter/order/new'}>free</Button> );
+        return ( <Button onClick={() => updateStatus(tableId, 'thinking')}>free</Button> );
       case 'thinking':
-        return ( <Button onClick={() => updateStatus(id, status)}
-          href={process.env.PUBLIC_URL + '/waiter/order/new'}>thinking</Button> );
+        return ( <Button onClick={() => updateStatus(tableId, 'prepared')}>thinking</Button> );
       case 'ordered':
-        return ( <Button onClick={() => updateStatus(id, status)}
-          href={process.env.PUBLIC_URL + '/waiter/order/new'}>ordered</Button> );
+        return ( <Button onClick={() => updateStatus(tableId, 'delivered')}>prepared</Button> );
       case 'prepared':
-        return ( <Button onClick={() => updateStatus(id, status)}
-          href={process.env.PUBLIC_URL + '/waiter/order/new'}>prepared</Button> );
+        return ( <Button onClick={() => updateStatus(tableId, 'prepared')}>delievered</Button> );
       case 'delivered':
-        return ( <Button onClick={() => updateStatus(id, status)}
-          href={process.env.PUBLIC_URL + '/waiter/order/new'}>delivered</Button> );
+        return ( <Button onClick={() => updateStatus(tableId, 'paid')}>delivered</Button> );
       case 'paid':
-        return ( <Button onClick={() => updateStatus(id, status)}
-          href={process.env.PUBLIC_URL + '/waiter/order/new'}>paid</Button> );
+        return ( <Button onClick={() => updateStatus(tableId, 'free')}>paid</Button> );
       default:
         return null;
     }

@@ -37,13 +37,13 @@ export const fetchFromAPI = () => {
   };
 };
 
-export const updateTableStatus = (tableId, status) => {
-  console.log(tableId, status);
+export const updateTableStatus = (tableId, tableStatus) => {
+  console.log('tableId: ', tableId, ' tableStatus: ', tableStatus);
   return (dispatch, getState) => {
     axios
-      .patch(`${api.url}/api/${api.tables}/${tableId}`, { status })
+      .patch(`${api.url}/api/${api.tables}/${tableId}`, { tableStatus })
       .then(res => {
-        dispatch(updateStatus({ status, tableId }));
+        dispatch(updateStatus({ tableStatus, tableId }));
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));
@@ -53,6 +53,7 @@ export const updateTableStatus = (tableId, status) => {
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
+  console.log('statePart: ', statePart, ' action: ', action);
   switch (action.type) {
     case FETCH_START: {
       return {

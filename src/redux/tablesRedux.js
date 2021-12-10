@@ -37,13 +37,14 @@ export const fetchFromAPI = () => {
   };
 };
 
-export const updateTableStatus = (tableId, tableStatus) => {
-  console.log('tableId: ', tableId, ' tableStatus: ', tableStatus);
+export const updateTableStatus = (tableId, tableStatus, tableOrder) => {
+  console.log('id: ', tableId, ' status: ', tableStatus, ' tableOrder: ', tableOrder);
+
   return (dispatch, getState) => {
     axios
-      .patch(`${api.url}/api/${api.tables}/${tableId}`, { tableStatus })
+      .put(`${api.url}/api/${api.tables}/${tableId}`, { tableStatus, tableOrder})
       .then(res => {
-        dispatch(updateStatus({ tableStatus, tableId }));
+        dispatch(updateStatus({ tableId, tableStatus, tableOrder }));
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));
@@ -53,7 +54,7 @@ export const updateTableStatus = (tableId, tableStatus) => {
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
-  console.log('statePart: ', statePart, ' action: ', action);
+  console.log('payload: ', action.payload);
   switch (action.type) {
     case FETCH_START: {
       return {
@@ -86,8 +87,8 @@ export default function reducer(statePart = [], action = {}) {
     case UPDATE_STATUS: {
       return {
         ...statePart,
-        data: statePart.data.map(table => table.id === action.payload.tableId ?
-          { ...table, status: action.payload.status } : table),
+        data: statePart.data.map(table => table.id === action.payload.tableId && table.order === action.payload.tableOrder ?
+          { ...table, status: action.payload.status, order: action.payload.tableOrder } : table),
       };
     }
     default:

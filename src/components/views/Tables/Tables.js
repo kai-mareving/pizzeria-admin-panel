@@ -178,11 +178,6 @@ const Tables = (props) => {
 
 Tables.propTypes = {
   title: PropTypes.string,
-  // match: PropTypes.shape({
-  //   params: PropTypes.shape({
-  //     id: PropTypes.string,
-  //   }),
-  // }),
 };
 Tables.defaultProps = {
   title: 'Tables view',

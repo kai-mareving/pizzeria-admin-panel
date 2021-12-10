@@ -7,7 +7,7 @@ const server = jsonServer.create();
 const router = jsonServer.router('build/db/app.json');
 const middlewares = jsonServer.defaults({
   static: 'build',
-  noCors: true,
+  noCors: false,
   logger: true, //* logs json server activity in console
 });
 const port = process.env.PORT || 3131;

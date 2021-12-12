@@ -23,6 +23,7 @@ export const updateStatus = payload => ({ payload, type: UPDATE_STATUS });
 
 /* thunk creators */
 export const fetchFromAPI = () => {
+
   return (dispatch, getState) => {
     dispatch(fetchStarted());
 
@@ -53,7 +54,7 @@ export const updateTableStatus = (id, status, order) => {
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
-  console.log('payload: ', action.payload);
+
   switch (action.type) {
     case FETCH_START: {
       return {

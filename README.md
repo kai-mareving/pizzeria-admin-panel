@@ -1,6 +1,6 @@
 # Development
 
-## URLe available on `yarn start`
+## URL's available on `yarn start`
 
 - http://localhost:3000 - the current project, i.e. the administration panel (`webpack-dev-server`)
 - http://localhost:3131 - pizzeria page for clients

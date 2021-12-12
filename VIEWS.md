@@ -1,6 +1,6 @@
 # Dashboard
 
-- `/`
+- `/` [DONE]
   - todays orders statistics (remote and local)
     - table with 2 rows (remote + local)
     - 2 columns in row (number + number)

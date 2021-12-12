@@ -36,22 +36,22 @@ class Waiter extends React.Component {
     fetchTables();
   }
 
-  renderActions(tableId, tableStatus, tableOrder) {
+  renderActions(id, status) {
     const { updateStatus } = this.props;
 
-    switch (tableStatus) {
+    switch (status) {
       case 'free':
-        return ( <Button onClick={() => updateStatus(tableId, 'thinking', tableOrder)}>free</Button> );
+        return ( <Button onClick={() => updateStatus(id, 'thinking')}>free</Button> );
       case 'thinking':
-        return ( <Button onClick={() => updateStatus(tableId, 'prepared', tableOrder)}>thinking</Button> );
+        return ( <Button onClick={() => updateStatus(id, 'prepared')}>thinking</Button> );
       case 'ordered':
-        return ( <Button onClick={() => updateStatus(tableId, 'delivered', tableOrder)}>prepared</Button> );
+        return ( <Button onClick={() => updateStatus(id, 'delivered')}>prepared</Button> );
       case 'prepared':
-        return ( <Button onClick={() => updateStatus(tableId, 'prepared', tableOrder)}>delievered</Button> );
+        return ( <Button onClick={() => updateStatus(id, 'prepared')}>delievered</Button> );
       case 'delivered':
-        return ( <Button onClick={() => updateStatus(tableId, 'paid', tableOrder)}>delivered</Button> );
+        return ( <Button onClick={() => updateStatus(id, 'paid')}>delivered</Button> );
       case 'paid':
-        return ( <Button onClick={() => updateStatus(tableId, 'free', tableOrder)}>paid</Button> );
+        return ( <Button onClick={() => updateStatus(id, 'free')}>paid</Button> );
       default:
         return null;
     }
@@ -110,7 +110,7 @@ class Waiter extends React.Component {
                     )}
                   </TableCell>
                   <TableCell>
-                    {this.renderActions(table.id, table.status, table.order)}
+                    {this.renderActions(table.id, table.status)}
                   </TableCell>
                 </TableRow>
               ))}

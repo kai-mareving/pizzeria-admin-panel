@@ -87,8 +87,8 @@ export default function reducer(statePart = [], action = {}) {
     case UPDATE_STATUS: {
       return {
         ...statePart,
-        data: statePart.data.map(table => table.id === action.payload.tableId && table.order === action.payload.tableOrder ?
-          { ...table, status: action.payload.status, order: action.payload.tableOrder } : table),
+        data: statePart.data.map(table => table.id === action.payload.tableId ?
+          { ...table, status: action.payload.tableStatus } : table),
       };
     }
     default:
